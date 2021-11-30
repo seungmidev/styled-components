@@ -3,7 +3,6 @@
 CSS in JS로서, Javascript파일 안에서 CSS를 처리 할 수 있게 해주는 대표적인 라이브러리이다. [styled-components](https://styled-components.com/).
 
 ## Setup
-***
 ```
 yarn add styled-components
 ```
@@ -33,7 +32,7 @@ const Container = styled.div`
 ```
 
 ## typescript
-***
+
 ### 타입 지정
 ```javascript
 // src/types/styled.d.ts
