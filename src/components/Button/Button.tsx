@@ -37,7 +37,7 @@ const SIZE = {
   `,
 }
 
-// attrs: Attributes 속성을 부여하고 싶을 때
+// attrs: Attributes 속성을 부여하고 싶을 때(고정적인 props, 기본 tag props 등)
 export const StyleButton = styled.button.attrs(props => ({
   type: props.type || 'button'
 }))<ButtonProps>`

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from './components/Button/Button';
 import BlockButton from './components/Button/BlockButton';
 
-const StyleBox = styled.div`
+const Container = styled.div`
   width: 550px;
   margin: 50px auto;
   
@@ -19,7 +19,7 @@ function App() {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <StyleBox>
+      <Container>
         <div className="btn-wrap">
           <Button color="primary">Primary</Button>
           <Button color="secondary" size="small">Secondary</Button>
@@ -28,7 +28,7 @@ function App() {
           <Button color="link">Link</Button>
           <BlockButton type="reset" color="primary" size="large">Block</BlockButton>
         </div>
-      </StyleBox>
+      </Container>
     </React.Fragment>
   );
 }

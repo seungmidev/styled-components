@@ -3,7 +3,9 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
-  
+  * {
+    box-sizing: border-box;
+  }
   html {
     /* 결과 → 16px × 62.5% = 10px */
     font-size: 62.5%;
