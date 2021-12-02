@@ -4,21 +4,21 @@ import styled, { css, ButtonProps } from 'styled-components';
 // mixin: CSS 그룹화하여 여러 곳에서 쓰고 싶을 때
 const COLOR = {
   primary: css`
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: ${({ theme }) => theme.color.primaryColor};
+    border-color: ${({ theme }) => theme.color.primaryColor};
   `,
   secondary: css`
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: ${({ theme }) => theme.color.secondaryColor};
+    border-color: ${({ theme }) => theme.color.secondaryColor};
   `,
   light: css`
     color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
+    background-color: ${({ theme }) => theme.color.lightColor};
+    border-color: ${({ theme }) => theme.color.lightColor};
   `,
   dark: css`
-    background-color: #343a40;
-    border-color: #343a40;
+    background-color: ${({ theme }) => theme.color.darkColor};
+    border-color: ${({ theme }) => theme.color.darkColor};
   `,
   link: css`
     color: #007bff;
@@ -38,8 +38,8 @@ const SIZE = {
 }
 
 // attrs: Attributes 속성을 부여하고 싶을 때(고정적인 props, 기본 tag props 등)
-export const StyleButton = styled.button.attrs(props => ({
-  type: props.type || 'button'
+export const StyleButton = styled.button.attrs(({ type }) => ({
+  type: type || 'button',
 }))<ButtonProps>`
   display: inline-block;
   align-items: center;
@@ -57,6 +57,6 @@ export const StyleButton = styled.button.attrs(props => ({
  ${props => props.size && SIZE[props.size]};
 `;
 
-const Button = ({ children, type, ...props }: ButtonProps) => <StyleButton {...props}>{children}</StyleButton>;
+const Button = ({ children, ...props }: ButtonProps) => <StyleButton {...props}>{children}</StyleButton>;
 
 export default Button;
